@@ -17,13 +17,13 @@ import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyDummyKeyForCareKeyAppInit12345",
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "carekey-468e8.firebaseapp.com",
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "carekey-468e8",
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "carekey-468e8.firebasestorage.app",
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "710481154551",
-  appId: import.meta.env.VITE_FIREBASE_APP_ID || "1:710481154551:web:cec3e46a3cd02a26ff5ef2",
-  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || "G-PJQNG6BCLW"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApps()[0];
